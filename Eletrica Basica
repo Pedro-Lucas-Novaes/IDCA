@@ -1,0 +1,88 @@
+Tensão -> Volts
+Corrente -> Ampere
+Resistencia -> OHm
+
+Tensão Corrente Resistencia
+
+A eletrônica está fundamentada sobre os conceitos de tensão,corrente e resistência.
+
+Podemos entender como tensão a energia potencial armazenada em uma pilha ou bateria e que fluirá
+quando um circuito for fechado, através de um meio condutor, entre os polos de maior e menor
+potenciais(sentido convencional).
+
+Como analogia, podemos considerar a água armazenada em dois recipientes conectados
+por um cano (meio condutor).
+
+A água fluirá do recipiente que possui maior quantidade de água para o menor.
+
+Tensão é a diferença de potencial que você tem na fonte
+
+---
+
+Em eletrônica, o principio é o mesmo. Por exemplo, os polos positivos e negativos de uma pilha,
+ou qualquer oitra fonte de energia, inficam o sentido no qual a corrente elétrica fluirá.
+Dessa forma podemos definir que a corrente elétrica é a movimentação ordenada de cargas elétricas através de um meio condutor. 
+
+*Corrente é a quantidade de energia passando pelo meio condutor no momento em que o circuito esta sendo alimentado.
+
+ex: um cano maior, a corrente será maior, um cano menor, a corrente será menor
+
+---
+
+Corrente elétrica (Continua)
+
+Existem dois tipos de circuitos eletrônicos. 
+Aqueles fundamentados sobre uma fonte de energia de corrente continua.
+
+Exemplo, pilhas, baterias ou qualquer outro elemntro que
+apresenta um polo positivo (+) e outro negativo (-).
+
+Obs: Carga é qualquer equipamento que consuma energia
+
+Corrente continua é aquela que não varia, sempre positivo de um lado e negativo do outro
+
+
+---
+
+
+Corrente Elétrica (Alternada)
+
+Também existem os circuitos de corrente alternada, dos quais podemos citar como melhor exemplo as tomadas residênciais, que fornecem uma alimentação de 100 ou 200 volts.
+
+
+---
+
+
+Corrente Elétrica Movimentação
+
+A corrente é o fluxo de energia 'correndo' pelo fio, como a água corre por uma mangueira. 
+pode encontrar elementos que oferecem certa resistência à passagem dessas cargas.
+
+A tensão (Volt): É quem dá o empurrão. Sem ela, nada se move.
+
+A Corrente (Ampere): É quem faz o trabalho (acende a luz, gira o motor).São os trablahadores passando.
+
+A Resistência (Ohm): É o "obstáculo" no caminho. Às vezes ela é ruim (fio ruim), mas às vezes é util (gera calor no chiveiro ou luz na lâmpada).
+
+
+---
+
+
+Resistência
+
+Resistência elétrica é a capacidade de um corpo qualquer se opor á passagem de corrente elétrica
+mesmo quando existe uma diferença de potencial aplicada. É medida em ohms (Omega).
+
+Resistores são componentes que têm por finalidade oferecer uma oposição à passagem   de corrente elétrica, através de seu material. A essa oposição damos o nome de resistência elétrica.
+
+Os resistores provocam uma queda de tensão em seus terminais e limitam a corrente elétrica no circuito. Isso significa que, em um circuito em série, a corrente que entra por um terminal do resistor é exatamente a mesma que sai pelo outro terminal, enquanto existe uma queda de tensão entre seus terminais.
+Utilizando-se disso, é possivel usar os resistores para controlar a tensão sobre os componentes desejados.
+
+---
+
+Lei de OHM
+
+O valor de resistência é conhecido como ohm, e seu símbolo é o ômega grego, Nesse caso, o pino digital 10 está emitindo 5V de corrente contínua a 40 mA (miliampères; amperagem de acordo com o datasheet1 da Atmega), e seu LED requer (de acordo com o datasheet) uma voltagem de 2 V e uma corrente de 35 mA. Portanto, você necessita de um resistor que reduza os 5 V para 2 V, e a corrente de 40mA para 35 mA, caso queira exibir o LED com brilho máximo. Se você deseja um LED de menor luminosidade, pode utilizar um valor mais alto de resistência.
+
+Nota: NUNCA utilize um valor de resistor mais BAIXO que o necessário. você colocará corrente demais no LED, danificando-o permanentemente. Você também poderia danificar outros componentes de seu circuito.
+ 

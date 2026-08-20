@@ -1,0 +1,87 @@
+Atividade 1
+
+Questão 1
+
+R: Os microcontroladores têm interface de entrada e saída com dispositivos 
+elétricos como botões e relés, ao contrário dos microcontroladores de uso geral,
+normalmente dedicados a projetos de computadores com periféricos de entrada e saída como
+teclado, mouse e monitor.
+
+---
+
+Questão 2
+
+R: é um pino programável em um microcontrolador ou computador que funciona como entrada ou saída
+
+---
+
+Questão 3
+
+R: As interfaces de entrada e saida mais comuns são conhecidas como GPIO, podem ser configuradas
+como entradas ou saidas, por software, e representam interfaces digitais simples, que normalmente assumem o valor de 0 ou 1, representando nivel de tensão baixo ou alto.
+
+---
+
+Questão 4
+
+R: funciona como interruptor eletromecânico.
+Ele permite que um componente de baixa potência como o arduino, controle dispositivos de alta potência como uma lampada 220v, sem que os dois circuitos se "misturem" eletricamente.
+
+---
+
+Questao 5
+
+R: A história de microcontroladores de  destaque inclui o 8085 e o Z80,
+nas décadas de 70 e 80, o Microchip PIC, na década de 90 e no início do século XXI, e o Arduino, na ultima decada, que tem como maior legado seu ambiente de desenvolvimento, com diversas bibliotecas em linguagem C, incluindo suporte a diversos tipos de módulos de sensores, atuadores e comunicação
+
+---
+
+Questão 6
+
+R: Letra (B)
+
+Dispositivos elétricos do mundo fisico, como botões, relés e sensores
+
+---
+
+Questão 7
+
+R: Letra (B)
+
+Memória RAM, EPROM/Flash, oscilador (clock), interfaces seriais, USB, Ethernet, Wi-Fi e Bluetooth.
+
+---
+
+Questão 8
+
+R: Letra (C)
+
+É uma plataforma de hardware/software livre e aberta, de baixo custo, frequentemente baseada em chips Atmel
+
+---
+
+Questão 9
+
+R: Letra (B)
+
+Módulo Sonar, Sensor de Umidade do Solo, Sensor de Temperatura/Umidade e Sensor Infravermelho.
+
+---
+
+Questão 10
+
+R: Letra (C)
+
+Shields
+
+---
+
+Questão 11
+
+R:
+
+(V) O Microcontrolador ATmega328P É o componente principal utilizado na placa Arduino Uno.
+(F) O relé misture eletricamente o circuito de baixa potência do Arduino [5v] com a rede elétrica de alta tensão [220v]
+(V) Entradas analógicas no Arduino Uno convertem tensões de 0 a 5V em valores inteiros que variam de 0 a 1.023.
+(V) Historicamente, microcontroladores como 8085 e Z80 surgiam nas décadas de 1970 e 1980.
+(V) Vários microcontroladores atuais possuem consumo de energia tão baixo que podem funcionar por longos períodos alimentados por uma simples bateria moeda [coin cell].
