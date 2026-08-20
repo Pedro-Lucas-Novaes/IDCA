@@ -1,0 +1,145 @@
+1 – Ligar três led´s na posição 9,8, 10 quando pressionar uma letra deverá acender o led na 
+posição 9 e 10.
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  	char valor = Serial.read();
+    if(valor == '1'){
+    	digitalWrite(2, HIGH);
+      	digitalWrite(3, HIGH);
+    }
+  	else if(valor == '2'){
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+  }
+}
+
+
+2 – Ligar três led´s na posição 8, 9, 10 quando pressionar a letra L deverá acender todos os led´s 
+da posição 8, 9 e 10 e quando pressionar a letra D deverá desligar na posição contrária que foi 
+ligado os led´s 8, 9 e 10.
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  	char valor = Serial.read();
+    if(valor == 'l'){
+    	digitalWrite(2, HIGH);
+      	delay(100);
+      	digitalWrite(3, HIGH);
+      	delay(100);
+      	digitalWrite(4, HIGH);
+      	delay(100);
+    }
+  	else if(valor == 'd'){
+    digitalWrite(4, LOW);
+    delay(100);
+    digitalWrite(3, LOW);
+    delay(100);
+    digitalWrite(2, LOW);
+    delay(100);
+  }
+}
+
+
+3 – Ligar 3 led´s na posição 8, 9, 10 quando pressionar a letra K deverá acender todos os led´s 
+da posição 8, 9 e 10 quando pressionar a letra P deverá realizar um efeito de pisca pisca nos 
+led´s.
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  	char valor = Serial.read();
+    if(valor == 'k'){
+    	digitalWrite(2, HIGH);
+      	delay(100);
+      	digitalWrite(3, HIGH);
+      	delay(100);
+      	digitalWrite(4, HIGH);
+      	delay(100);
+    }
+  	else if(valor == 'p'){
+      	while (true){
+      	digitalWrite(2, HIGH);
+      	delay(100);
+        digitalWrite(3, HIGH);
+      	delay(100);
+        digitalWrite(4, HIGH);
+      	delay(100);
+        digitalWrite(4, LOW);
+      	delay(100);
+        digitalWrite(3, LOW);
+      	delay(100);
+        digitalWrite(2, LOW);
+      	delay(100);
+      }
+     }
+  }
+
+
+4. Programar um sistema de segurança onde a ordem das ações é fundamental. O usuário 
+deverá aplicar lógica de estados para garantir que o cofre só abra se a sequência exata de 
+caracteres for digitada. Quando digitar as sequência “FAT” 
+
+Quando o usuário digitar F = LED 1 ligado, A = LED 1 e LED 2 LIGADO e T = TODOS OS LED`S 
+Ligado
+qualquer valor diferente de FAT os led´s desligam.
+
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  if (Serial.available() > 0) {
+  	char valor = Serial.read();
+    if(valor == 'f'){
+    	digitalWrite(2, HIGH);
+      	delay(100);
+    }
+  	else if(valor == 'a'){
+      	digitalWrite(3, HIGH);
+      	delay(100);
+      }
+  	else if(valor == 't'){
+      	digitalWrite(4, HIGH);
+      	delay(100);
+      }
+  else if(valor != 'f'||'a'||'t'){
+      	digitalWrite(2, LOW);
+      	delay(100);
+    	digitalWrite(3, LOW);
+      	delay(100);
+    	digitalWrite(4, LOW);
+      	delay(100);
+      }
+  
+     }
+}

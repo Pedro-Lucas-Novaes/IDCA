@@ -1,0 +1,35 @@
+Comunicação Serial
+
+Comunicação bit-a-bit refere-se a um tipo de comunicação em que os dados são trnamitidos ou recebidos de forma sequencial, bit por bit, em oposição à comunicação paralela, onde vários bits são transmitidos. Na comunicação serial, como a utilizada no Arduino através da USB, os dados são enviados recebidos bit-a-bit ao longode um unico canal de monicação
+
+A comunicação serial no Arduino feita através de USB é do tipo full-duplex assíncrona.
+
+-----
+
+Comunicação Serial - Assicrona
+
+Em sistemas de comunicação, existem três categorias básicas. O Full-duplex é o nivel mais alto de eficiência.
+
+Como funciona: Existem fios separados para enviar (TX) e receber (RX) dados. Como os caminhos são independentes, O arduino pode "falar" e "ouvir" ao mesmo tempo, sem que uma ação atrapalhe a outra.
+
+diferença do Half-duplex: O Half-duplex seria como um Walkie-Talkie. Você precisa apertar um botão para falar e soltar para ouvir; se os dois falarem ao mesmo tempo, a mensagem trava.
+
+---
+
+Comunicação Serial - assíncrona
+
+significa que não há um maestro (um sinal de clock) regendo o tempo exato de cada bit
+
+Se eu te enviar uma sequência de luzes piscando muito rapido, como você sabe onde começa um número e termina o outro sem um relógio batendo o tempo?    
+
+Na comunicação assíncrona, os dois dispositivos combinam a velocidade antes de começar (ex: 9600 bps)
+
+Eles também usam bits especiais:
+
+* Start bit: Um sinal que diz "Ei, lá vem um dado!".
+* stop bit: Um sinal que diz "Acabou este pacote"
+
+Desvantagem: Se a velocidade (baud rate) configurada no Arduino for diferente da do computador, você verá apenas símbolos estranhos (o famoso "lixo" no monitor serial).
+
+-----
+
