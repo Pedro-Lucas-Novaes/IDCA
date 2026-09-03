@@ -1,0 +1,63 @@
+Potenciômetro
+
+Um potenciômetro é um tipo de resistor variável que é comumente usado em 
+eletrônica para ajustar a resistência em um circuito, controlando a quantidade 
+de corrente que passa por ele. 
+
+Quando utilizado em projetos com Arduino, o potenciômetro pode ser 
+empregado para diversas finalidades, como controlar a intensidade de LEDs, 
+ajustar o volume de um sinal de áudio, ou fornecer entradas analógicas que 
+podem ser lidas pelo microcontrolador.
+
+Entrada Analógica no Arduino: Quando ligado a uma entrada analógica do 
+Arduino, o potenciômetro pode fornecer um valor de tensão variável, que é 
+lido pelo pino analógico como um valor entre 0 e 1023 (em um Arduino padrão 
+com uma resolução de 10 bits).
+
+Isso se deve ao conversor ADC (Analog-to-Digital Converter)
+O ADC é o componente que converte um sinal analógico contínuo (0 a 5V, 
+por exemplo) em um valor digital que o microcontrolador pode entender
+
+----
+
+Por que 0 a 1023?
+
+A maioria dos Arduinos (como o Uno) tem um ADC de 10 bits.
+Com 10 bits, você pode representar 2¹⁰ = 1024 valores diferentes.
+Como a contagem começa do zero, os valores vão de 0 a 1023.
+
+----
+
+Função Map
+
+A função map(), é uma função matemática que pode ser
+utilizada para transformar uma sequência de números em
+uma outra. Para utilizá-la é necessário inserir a primeira faixa 
+numérica, que é a obtida a partir de uma medição utilizando as 
+entradas analógicas, o número menor e o maior medido 
+
+Sintaxe:
+map(variável, do valor menor , do valor maior , para menor valor , para o maior valor);
+exemplo(A5, 0 , 1023, 255, 700);
+
+----
+
+PWM
+
+Um pino PWM (Pulse Width Modulation) em um microcontrolador, como o Arduino, é 
+um pino digital que pode gerar um sinal de saída com diferentes larguras de pulso.
+
+ O PWM é uma técnica de modulação de largura de pulso usada para controlar a 
+potência entregue a dispositivos eletrônicos, como LEDs, motores e outros atuadores.
+
+COMO FUNCIONA
+
+Sinal PWM alterna entre ligado (HIGH) e desligado (LOW) muito rapidamente.
+ A relação entre o tempo em que o sinal está ligado e o tempo total de um ciclo 
+completo é chamada de duty cycle (ciclo de trabalho).
+O ciclo de trabalho é expresso em porcentagem e determina a potência média 
+entregue:
+✔ 0%: O sinal está sempre em LOW (desligado), ou seja, sem energia.
+✔ 50%: O sinal passa metade do tempo ligado e metade desligado, resultando 
+em 50% da potência máxima.
+✔ 100%: O sinal está sempre em HIGH (ligado), fornecendo potência máxima.

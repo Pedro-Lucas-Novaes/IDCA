@@ -1,0 +1,149 @@
+Estado Logico
+
+O Interruptor como Base de Tudo
+Pense na lâmpada da sua sala. Ela só tem dois estados possíveis:
+
+● Interruptor fechado (ligado): A eletricidade passa, a lâmpada acende.
+No mundo digital, isso é o 1.
+
+● Interruptor aberto (desligado): A fiação está interrompida, a
+eletricidade não passa, a lâmpada apaga. Isso é o 0.
+
+O que voltagem?
+
+Dizer que "tem energia" ou "não tem energia" é um pouco impreciso para máquinas 
+sensíveis. Por isso, usamos a voltagem (tensão) para definir esses estados:
+
+● 0 (Zero): Não é necessariamente a ausência total de energia, mas uma voltagem
+tão baixa (perto de 0V) que o circuito entende como "desligado".
+
+● 1 (Um): É uma voltagem alta e estável (por exemplo, 5V ou 3.3V). Quando o 
+circuito sente essa pressão elétrica, ele entende como "ligado
+
+-----
+
+
+Estado Logico
+
+De Interruptores para Portas Lógicas
+
+Um computador não é feito de interruptores mecânicos que 
+você aperta com o dedo, mas de bilhões de transistores. O
+transistor funciona exatamente como um interruptor, mas ele
+é "apertado" por um sinal elétrico.
+
+Quando combinamos esses "interruptores", criamos a lógica:
+
+● E (AND): A luz só acende se o Interruptor A E o
+Interruptor B estiverem ligados.
+
+● OU (OR): A luz acende se o Interruptor A OU o
+Interruptor B estiverem ligados.
+
+----
+
+Voltagem
+
+Imagine que o circuito é como uma torneira e a
+voltagem é a pressão da água.
+
+Se a pressão estiver forte, você sabe que a torneira 
+está aberta. 
+
+Se não sai gota nenhuma, você sabe que está 
+fechada. 
+
+O problema acontece quando a torneira fica
+"pingando" ou com um fluxo incerto: você não sabe
+se alguém esqueceu de fechar ou se a pressão da rua
+caiu.
+
+----
+
+Interruptor e o Fluxo (0 e 1)
+
+Interruptor Aberto (Estado 0): O caminho físico
+está cortado. Como o ar não conduz eletricidade
+bem, a corrente para. Se você colocar um medidor
+na saída, ele marcará 0V. O computador lê isso
+como um "Não" ou "Falso".
+
+Interruptor Fechado (Estado 1): O metal encosta
+no metal. A energia flui livremente. Se a sua fonte é
+de 5V a saída terá 5V. O computador lê isso como
+um "Sim" ou "Verdadeiro"
+
+----
+
+Precisão de 5 Volts
+
+Na eletrônica, os componentes são projetados para "esperar" um valor 
+específico. Se o sistema foi feito para trabalhar com 5V:
+
+● Ideal: O circuito entrega exatamente 5V.
+
+● Aceitável: O circuito entrega 4,8V ou 4,9V. O sistema ainda entende que
+isso é "1".
+
+● O Perigo: Se a voltagem cair para 2,5V(metade), o componente fica
+"confuso". Ele não sabe se aquilo é um 0 muito alto ou um 1 muito
+baixo. É como uma lâmpada que fica piscando fracamente; você não
+sabe se ela deveria estar acesa ou apagada
+
+----
+
+O que é estado flutuante ?
+
+Um estado flutuante ocorre quando a saída não está conectada nem ao
+"positivo" 5V nem ao "negativo/terra 0V.
+
+    Imagine um fio solto balançando no ar. Ele pode captar interferência
+    eletromagnética de outros aparelhos (como um celular ou motor
+    próximo) e começar a oscilar entre 1V e 3V aleatoriamente.
+
+Para o computador, isso é um desastre:
+
+● O sistema começa a ler valores fantasmas.
+
+● Ele pode entender "010100" quando, na verdade, não deveria estar 
+recebendo nada.
+
+● Isso causa erros de processamento e travamentos
+
+----
+
+Por que isso importa
+
+Garantir que a voltagem esteja perto de 5V (para o 1) ou
+0v (para o 0) é o que separa um computador funcional de
+uma máquina que comete erros aleatórios.
+
+Para evitar que o circuito "flutue", os engenheiros usam
+componentes chamados resistores de Pull-up ou
+Pull-down, que "puxam" a voltagem para um valor
+definido quando o interruptor está aberto.
+
+Se a voltagem ficar "flutuando" (por exemplo, 2.5V), o computador não sabe o que fazer e começa a 
+cometer erros aleatórios.
+
+O culpado disso é o pino "solto". Quando um botão não está pressionado, o pino de leitura não está 
+encostado em nada, captando interferências do ar como se fosse uma antena.
+
+----
+
+Push Button (também conhecido como chave táctil
+ou micro switch).
+
+É um dos componentes mais básicos e comuns na eletrônica. Ele 
+funciona como um interruptor momentâneo. 
+Como ele funciona?
+
+•Contato Momentâneo: Quando você aperta, as pernas metálicas 
+internas se encostam, fechando o circuito. Quando você solta, uma 
+mola interna empurra o botão de volta e o circuito se abre (desliga).
+
+•Pinos: Geralmente ele possui 4 terminais. Na maioria dos modelos, os 
+pinos são conectados em pares. Ou seja, dois pinos de um lado já estão 
+interligados permanentemente, e o botão serve para conectar um par 
+ao outro.
+

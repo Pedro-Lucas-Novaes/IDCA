@@ -1,0 +1,23 @@
+// C++ code
+//
+int led = 8;
+int botao = 7;
+int estadoLed = LOW;
+int estadoAnterior = LOW;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(botao, INPUT);
+}
+
+void loop() {
+  int leituraAtual = digitalRead(botao);
+
+  if(leituraAtual == HIGH && estadoAnterior == LOW){
+  	estadoLed = !estadoLed;
+    delay(50);
+  }
+  digitalWrite(led, estadoLed);
+  estadoAnterior = leituraAtual;
+}

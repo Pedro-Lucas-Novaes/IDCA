@@ -1,0 +1,17 @@
+// C++ code
+//
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{
+  int sinal = analogRead(A1);
+  digitalWrite(2, HIGH);
+  delay(sinal);
+  digitalWrite(2, LOW);
+  delay(sinal);
+  Serial.println(sinal);
+}
