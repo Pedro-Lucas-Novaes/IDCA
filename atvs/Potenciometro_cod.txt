@@ -1,17 +1,20 @@
 // C++ code
 //
+int potenciometro = A1;
+int led = 3;
 void setup()
 {
   Serial.begin(9600);
-  pinMode(2, OUTPUT);
+  pinMode(led, OUTPUT);
 }
 
 void loop()
 {
-  int sinal = analogRead(A1);
-  digitalWrite(2, HIGH);
-  delay(sinal);
-  digitalWrite(2, LOW);
-  delay(sinal);
-  Serial.println(sinal);
+  int valor = analogRead(potenciometro);
+              
+  int valorPWM = map(valor, 0, 1023, 0, 255);
+               
+  analogWrite(led, valorPWM);
+  delay(10);
+  
 }

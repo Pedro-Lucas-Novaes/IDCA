@@ -1,0 +1,38 @@
+int potenciometro = A1;
+int led4 = 4;
+int led3 = 3;
+int led2 = 2;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+}
+
+void loop()
+{
+  int valor = analogRead(potenciometro);
+
+  if (valor >= 550) {
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+  }
+  else if (valor >= 500) {
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, LOW);
+  }
+  else if (valor >= 150) {
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, HIGH);
+  }
+  else {
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+  }
+}

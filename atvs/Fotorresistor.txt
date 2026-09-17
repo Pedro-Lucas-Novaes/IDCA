@@ -1,0 +1,57 @@
+    int fotoresistor = A0;
+
+    int lampada1 = 2;
+    int lampada2 = 3;
+    int lampada3 = 4;
+    int lampada4 = 5;
+    int lampada5 = 6;
+
+    int limiteTarde = 500;
+    int limiteNoite = 200;
+
+    void setup() {
+    pinMode(lampada1, OUTPUT);
+    pinMode(lampada2, OUTPUT);
+    pinMode(lampada3, OUTPUT);
+    pinMode(lampada4, OUTPUT);
+    pinMode(lampada5, OUTPUT);
+
+    Serial.begin(9600);
+    }
+
+    void loop() {
+
+    int luz = analogRead(fotoresistor);
+
+    Serial.print("Valor do fotoresistor: ");
+    Serial.println(luz);
+
+    if (luz > limiteTarde) {
+
+        digitalWrite(lampada1, LOW);
+        digitalWrite(lampada2, LOW);
+        digitalWrite(lampada3, LOW);
+        digitalWrite(lampada4, LOW);
+        digitalWrite(lampada5, LOW);
+    }
+
+    else if (luz > limiteNoite) {
+
+        digitalWrite(lampada1, HIGH);
+        digitalWrite(lampada2, HIGH);
+        digitalWrite(lampada3, LOW);
+        digitalWrite(lampada4, LOW);
+        digitalWrite(lampada5, LOW);
+    }
+
+    else {
+
+        digitalWrite(lampada1, HIGH);
+        digitalWrite(lampada2, HIGH);
+        digitalWrite(lampada3, HIGH);
+        digitalWrite(lampada4, HIGH);
+        digitalWrite(lampada5, HIGH);
+    }
+
+    delay(1000);
+    }

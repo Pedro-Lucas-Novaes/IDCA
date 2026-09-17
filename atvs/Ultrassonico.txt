@@ -1,0 +1,52 @@
+int ECHO = 3;
+int TRIGGER = 2;
+int led1 = 4;
+int led2 = 5;
+int led3 = 6;
+int tempo;
+int distancia;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(ECHO, INPUT);
+  pinMode(TRIGGER, OUTPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(TRIGGER, LOW);
+  delay(100);
+  digitalWrite(TRIGGER, HIGH);
+  delay(2);
+  digitalWrite(TRIGGER, LOW);
+  
+  tempo = pulseIn(ECHO, HIGH);
+  distancia = tempo / 58;
+  
+  Serial.print(distancia);
+  Serial.println(" cm");
+  
+  if(distancia > 300){
+  	digitalWrite(led1, HIGH);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+  }
+  else if(distancia > 150) {
+  	digitalWrite(led1, LOW);
+    digitalWrite(led2, HIGH);
+    delay(200);
+    digitalWrite(led2, LOW);
+    
+    digitalWrite(led3, LOW);
+  }
+  else {
+  	digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
+    delay(200);
+    digitalWrite(led3, LOW);
+  }
+}
